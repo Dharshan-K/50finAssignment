@@ -12,7 +12,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://five0fin-backend.onrender.com"],  
+    allow_origins=["https://five0fin-frontend-9p7b.onrender.com"],  
     allow_methods=["*"],
     allow_headers=["*"],
 
