@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Post } from './Components/post'; 
+import { BrowserRouter,RouterProvider,createBrowserRouter } from 'react-router-dom';
+import Editor from './Components/Editor';
+const forEdit = true;
+const forPost = false;
+
+
+const router = createBrowserRouter([
+  {path: "/", element: <App/>},
+  {path: "/post/:postId", element: <Post />},
+  {path: "/Editor/:postId", element:<Editor edit={forEdit}/>},
+  {path: "/Editor", element:<Editor edit={forPost}/>}
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 

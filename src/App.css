@@ -13,6 +13,31 @@
   text-decoration: none;
 }
 
+.singleTitle{
+  text-align: center;
+  font-size: 10vh;
+}
+
+.singleBody{
+  font-size: 4vh;
+  margin: 10px;
+}
+
+
+.Link{
+  text-decoration: none;
+  color: black;
+}
+
+.postBody{
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  min-height: 100%;
+}
+
 .title{
   font-size: 5vh;
   margin: 2px;
@@ -36,6 +61,13 @@
   margin: 4px;
 }
 
+.editTitle{
+  margin: 10vh;
+}
+
+.reactQuill{
+  margin-bottom: 10vh;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
