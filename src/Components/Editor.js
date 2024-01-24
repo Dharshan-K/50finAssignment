@@ -31,7 +31,7 @@ export default function Editor({ edit }) {
   useEffect(() => {
     const getBlog = async () => {
       await axios.get(
-        `http://127.0.0.1:8000/post/${blogId.postId}`
+        `https://five0fin-backend.onrender.com/post/${blogId.postId}`
       ).then((response)=>{
         setTitle(response.data.title)
         setValue(response.data.body)
@@ -57,7 +57,7 @@ export default function Editor({ edit }) {
     };
     console.log(postData);
     await axios
-      .put(`http://127.0.0.1:8000/post/${blogId.postId}`, postData)
+      .put(`https://five0fin-backend.onrender.com/post/${blogId.postId}`, postData)
       .then((response) => {
         navigate("/");
 
@@ -76,7 +76,7 @@ export default function Editor({ edit }) {
     };
     console.log(postData);
     await axios
-      .post(`http://127.0.0.1:8000/posts`, postData)
+      .post(`https://five0fin-backend.onrender.com/posts`, postData)
       .then((response) => {
         navigate("/")
       })

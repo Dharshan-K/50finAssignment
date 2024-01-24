@@ -14,7 +14,7 @@ export function Post(){
 
     useEffect(()=>{
         async function getPost(){
-            await axios.get(`http://127.0.0.1:8000/post/${postId}`).then(response=>{
+            await axios.get(`https://five0fin-backend.onrender.com/post/${postId}`).then(response=>{
                 console.log(response.data)
                 setPost(response.data)
             })

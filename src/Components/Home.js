@@ -7,7 +7,7 @@ export function Home(){
 
     useEffect(()=>{
         async function getBlogs(){
-            await axios.get("http://127.0.0.1:8000/blogs").then((response)=>{
+            await axios.get("https://five0fin-backend.onrender.com/blogs").then((response)=>{
                 setPostState(response.data)
             })
         }
@@ -24,7 +24,7 @@ export function Home(){
     }
 
     const handleDelete = async(postId)=>{
-        await axios.delete(`http://127.0.0.1:8000/post/${postId}`).then(response=>{
+        await axios.delete(`https://five0fin-backend.onrender.com/post/${postId}`).then(response=>{
             console.log(response)
             navigate("/")
         })
